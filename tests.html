@@ -32,20 +32,14 @@
   <script type="text/Javascript" src="js/testing/testview.js?version={VERSION}"></script>
   <script type="text/Javascript" src="js/testing/init_testing.js?version={VERSION}"></script>
 
-  <!--
   <script type="text/Javascript" src="js/jquery.js"></script>
-  -->
-  <script type="text/javascript" src="http://www.google.com/jsapi"></script>
   <script type="text/javascript">
-    google.load("jquery", "1.6.4");
-
-    google.setOnLoadCallback(function() {
-        init_testing();
-
-        $('.test_description').live('click', function() {
-            $(this).siblings().toggle();
-        })
+  $(document).ready(function(){
+    init_testing();
+    $('.test_description').live('click', function(){
+      $(this).siblings().toggle();
     });
+  });
   </script>
  </head>
 
